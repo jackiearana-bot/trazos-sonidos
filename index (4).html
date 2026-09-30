@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trazos y Sonidos — Página de Ventas</title>
+<meta name="description" content="Guía práctica de grafismo y conciencia fonológica para acompañar los primeros pasos hacia la lectura y la escritura.">
+<style>
+:root {
+  --blue:#173d8f;
+  --pink:#ff4f91;
+  --pink2:#ff79aa;
+  --green:#52b96c;
+  --yellow:#ffd85a;
+  --orange:#ff9e38;
+  --purple:#8a59db;
+  --cream:#fff9ef;
+  --ink:#17345f;
+  --soft:#f8fbff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#2c3954;background:#fff;line-height:1.55}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+section{padding:52px 0}
+.hero{background:linear-gradient(180deg,#fff7ec 0%,#fff 100%)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:start}
+.eyebrow{display:inline-block;background:var(--yellow);color:var(--blue);padding:8px 16px;border-radius:999px;font-weight:900}
+h1{font-size:clamp(44px,7vw,78px);line-height:.95;margin:16px 0;color:var(--blue)}
+h1 span{color:var(--pink)}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.1;text-align:center;color:var(--ink);margin:0 0 18px}
+h3{color:var(--ink)}
+.lead{font-size:19px;max-width:900px;margin:0 auto 30px;text-align:center}
+.hero-copy{font-size:21px;max-width:640px}
+.cta{display:inline-block;background:linear-gradient(90deg,var(--pink),#ff2d77);color:#fff;font-weight:900;padding:18px 30px;border-radius:999px;box-shadow:0 12px 28px #ff4f9140}
+.subnote{font-size:14px;color:#62708b;margin-top:12px}
+.hero-art{background:white;border-radius:28px;padding:10px;box-shadow:0 16px 45px #163e711a;max-width:460px;justify-self:end}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.quick div{background:#fff;border:1px solid #e9edf5;border-radius:16px;padding:13px;text-align:center;font-weight:800}
+.pain{background:#fff3f8}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border-radius:22px;padding:22px;box-shadow:0 10px 28px #17345f12;border:1px solid #edf0f5}
+.card .icon{font-size:34px}
+.pain-core{max-width:880px;margin:24px auto 0;background:#fff;border:2px solid #ffd6e5;border-radius:22px;padding:24px;text-align:center}
+.method{background:#f2fbf3}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border-radius:22px;padding:20px;border:2px dashed #dfe7f1}
+.step b{display:block;font-size:19px;color:var(--pink);margin-bottom:6px}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:25px auto 0}
+.check{background:#fff;border:1px solid #e7ebf3;border-radius:16px;padding:15px}
+.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sample{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 28px #17345f14}
+.sample img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.sample-cap{padding:13px;font-weight:900;text-align:center;color:var(--ink)}
+.bonus-wrap{background:#fff9e9}
+.bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.bonus{background:#fff;border-radius:22px;padding:18px;display:grid;grid-template-columns:66px 1fr;gap:15px;align-items:center;border:1px solid #eceff6}
+.num{width:60px;height:60px;border-radius:16px;color:#fff;font-size:26px;font-weight:900;display:grid;place-items:center}
+.bonus:nth-child(1) .num{background:#55b66c} .bonus:nth-child(2) .num{background:#428be1}
+.bonus:nth-child(3) .num{background:#ffad2e} .bonus:nth-child(4) .num{background:#8a59db}
+.bonus:nth-child(5) .num{background:#ff6d9e} .bonus:nth-child(6) .num{background:#1fb0ae}
+.bonus-value{margin-top:8px;font-weight:900;color:var(--green);font-size:15px}
+.bonus-value del{color:#8a94a8;font-weight:700;margin-right:8px}
+.bonus-total{max-width:760px;margin:24px auto 0;background:#fff;border:2px solid #ffe08a;border-radius:18px;padding:16px 18px;text-align:center;font-weight:900;color:var(--ink);font-size:18px}
+.bonus-total del{color:#8a94a8;margin-right:8px}
+.proof{background:#fff4f8}
+.testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:960px;margin:auto}
+.testimonial{background:#fff;border:1px solid #e8edf4;border-radius:22px;padding:22px;box-shadow:0 10px 28px #17345f10}
+.name{font-weight:900;color:var(--ink);font-size:18px}
+.stars{color:#ffb31a;letter-spacing:2px;margin:5px 0 10px}
+.quote{font-size:17px}
+.disclaimer{max-width:960px;margin:18px auto 0;background:#fff9df;border:1px dashed #ddad2a;border-radius:14px;padding:14px;text-align:center;font-size:14px}
+.objections{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer-section{background:linear-gradient(180deg,#effbf2,#fff)}
+.offer{max-width:860px;margin:auto;text-align:center;background:#fff;border:2px solid #cfead5;border-radius:30px;padding:34px;box-shadow:0 12px 32px #163e7110}
+.price{font-size:68px;line-height:1;font-weight:900;color:#2f8c4f;margin:12px 0}
+.offer ul{display:inline-block;text-align:left;font-size:18px;line-height:1.8;margin:8px auto 18px}
+.guarantee{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:center;max-width:860px;margin:auto}
+.seal{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--yellow);border:10px solid #ffc430;color:#754700;font-weight:900}
+.faq{max-width:900px;margin:auto}
+details{background:#fff;border:1px solid #e6eaf1;border-radius:16px;padding:18px 20px;margin:12px 0}
+summary{font-weight:900;color:var(--ink);cursor:pointer}
+.final{background:linear-gradient(135deg,#fff1f7,#eef8ff);text-align:center}
+.center{text-align:center}
+@media(max-width:850px){
+  section{padding:44px 0}
+  .hero-grid,.guarantee{grid-template-columns:1fr}
+  .hero-art{max-width:620px;justify-self:center}
+  .quick,.cards4,.steps,.samples,.bonus-grid,.testimonials,.objections,.checks{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  section{padding:38px 0}
+  .container{width:min(94%,94%)}
+  .quick,.cards4,.steps,.samples,.bonus-grid,.testimonials,.objections,.checks{grid-template-columns:1fr}
+  .hero{padding-top:20px}
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  h1{font-size:42px;margin:12px 0}
+  h2{font-size:30px}
+  .lead{font-size:17px;margin-bottom:20px}
+  .hero-copy{font-size:18px;max-width:none}
+  .hero-art{max-width:100%;justify-self:stretch}
+  .quick{margin-top:16px}
+  .quick div{padding:12px;font-size:15px}
+  .card,.step,.testimonial,.bonus,.offer,details{padding:18px}
+  .pain-core{padding:18px}
+  .pain-core div:first-child{font-size:24px}
+  .pain-core div:last-child{font-size:18px}
+  .price{font-size:52px}
+  .guarantee{text-align:center;grid-template-columns:1fr}
+  .seal{margin:auto}
+  .sample img{aspect-ratio:4/5}
+}
+
+.hero-fit{
+  margin-top:18px;
+  background:#ffffff;
+  border:1px solid #e9edf5;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 8px 24px #17345f0d;
+}
+.hero-fit-title{
+  font-size:19px;
+  font-weight:900;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+.hero-fit-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+.hero-fit-item{
+  background:#f8fbff;
+  border-radius:14px;
+  padding:11px 12px;
+  font-weight:800;
+  font-size:15px;
+}
+.hero-proof{
+  margin-top:12px;
+  background:linear-gradient(90deg,#fff3cf,#fff7e8);
+  border-radius:14px;
+  padding:11px 13px;
+  text-align:center;
+  font-weight:900;
+  color:#6d5312;
+}
+.hero-objection{
+  margin-top:12px;
+  font-size:15px;
+  font-weight:800;
+  color:#42516e;
+}
+@media(max-width:560px){
+  .hero-fit{padding:15px;margin-top:14px}
+  .hero-fit-grid{grid-template-columns:1fr 1fr}
+  .hero-fit-item{font-size:14px;padding:10px}
+  .hero-proof{font-size:14px}
+}
+
+
+/* ===== AIDA V6 ===== */
+.aida-strip{
+  margin-top:18px;
+  background:#173d8f;
+  color:#fff;
+  border-radius:18px;
+  padding:14px 18px;
+  font-weight:900;
+  text-align:center;
+  font-size:18px;
+}
+.before-after{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  max-width:960px;
+  margin:30px auto 0;
+}
+.ba-card{
+  border-radius:24px;
+  padding:24px;
+  border:1px solid #e7ebf3;
+  box-shadow:0 10px 28px #17345f10;
+}
+.ba-before{background:#fff1f5}
+.ba-after{background:#effbf2}
+.ba-label{
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:999px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+.ba-before .ba-label{background:#ffd5e3;color:#9c3157}
+.ba-after .ba-label{background:#cdeed6;color:#25633a}
+.ba-card h3{font-size:25px;margin:4px 0 12px}
+.ba-list{display:grid;gap:10px}
+.ba-item{
+  background:#fff;
+  border-radius:14px;
+  padding:12px 14px;
+  font-weight:700;
+}
+.transform-box{
+  max-width:900px;
+  margin:28px auto 0;
+  background:linear-gradient(135deg,#fff7d9,#fff);
+  border:2px solid #ffe08a;
+  border-radius:24px;
+  padding:26px;
+  text-align:center;
+}
+.transform-box h3{
+  font-size:28px;
+  margin:0 0 10px;
+  color:var(--ink);
+}
+.cta-center{margin-top:28px;text-align:center}
+.cta-note{font-size:14px;color:#667288;margin-top:10px}
+.value-reminder{
+  max-width:760px;
+  margin:18px auto 0;
+  background:#f7fbff;
+  border:1px solid #dfe8f4;
+  border-radius:18px;
+  padding:16px;
+  text-align:center;
+  font-weight:900;
+  color:#17345f;
+}
+@media(max-width:700px){
+  .before-after{grid-template-columns:1fr}
+  .ba-card{padding:20px}
+  .transform-box{padding:20px}
+  .transform-box h3{font-size:24px}
+  .aida-strip{font-size:16px;padding:12px 14px}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">eBook práctico · 52 páginas</span>
+      <h1>TRAZOS <span>Y SONIDOS</span></h1>
+      <p class="hero-copy"><b>¿No sabes qué practicar primero con tu niño para ayudarlo a acercarse a la lectura y la escritura sin aburrirlo ni presionarlo?</b></p>
+      <p class="hero-copy">Con <b>Trazos y Sonidos</b> tendrás una secuencia visual y sencilla para trabajar trazos, sonidos, letras, sílabas y palabras paso a paso.</p>
+      <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">QUIERO EMPEZAR CON UNA GUÍA CLARA</a>
+      
+<div class="subnote">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+
+<div class="hero-fit">
+  <div class="hero-fit-title">Ideal para niños de 4 a 6 años que están comenzando con:</div>
+  <div class="hero-fit-grid">
+    <div class="hero-fit-item">✏️ Trazos y control del lápiz</div>
+    <div class="hero-fit-item">👂 Reconocimiento de sonidos</div>
+    <div class="hero-fit-item">🔤 Letras y sílabas</div>
+    <div class="hero-fit-item">📖 Primeras palabras y comprensión</div>
+  </div>
+  <div class="hero-proof">52 páginas + 6 bonos · Material imprimible · Acceso inmediato</div>
+  <div class="hero-objection">No necesitas ser maestra ni preparar actividades desde cero.</div>
+<div class="aida-strip">Menos improvisación. Más claridad para saber qué practicar primero y qué sigue después.</div>
+
+</div>
+
+      <div class="quick">
+        <div>✏️ Trazos</div>
+        <div>👂 Sonidos</div>
+        <div>🔤 Letras y sílabas</div>
+        <div>📖 Lectura inicial</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/img-01-2dc7661039.png" alt="Trazos y Sonidos">
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="container">
+    <h2>Quieres ayudarlo… pero cada día vuelves a preguntarte: “¿Qué practico hoy?”</h2>
+    <p class="lead">Tal vez tienes fichas, ideas y buena intención, pero no una ruta clara. Y cuando el niño se cansa, se frustra o no entiende la actividad, aparece la sensación de que estás avanzando a ciegas.</p>
+    <div class="cards4">
+      <div class="card"><div class="icon">😟</div><h3>Te preocupa que se frustre</h3><p>No quieres que aprender letras o escribir se convierta en una pelea ni que pierda las ganas de seguir intentando.</p></div>
+      <div class="card"><div class="icon">❓</div><h3>No sabes qué va primero</h3><p>¿Trazos, vocales, sonidos, sílabas o letras? Sin una secuencia es fácil saltar de una actividad a otra.</p></div>
+      <div class="card"><div class="icon">🔤</div><h3>Repite letras, pero no siempre las relaciona</h3><p>Puede copiar una letra varias veces y todavía necesitar ayuda para asociarla con su sonido, una imagen o una palabra.</p></div>
+      <div class="card"><div class="icon">⏰</div><h3>Quieres ayudar, pero no tienes horas</h3><p>Necesitas actividades claras, cortas y visuales que puedas usar en casa sin preparar una clase completa.</p></div>
+    </div>
+    <div class="pain-core">
+      <div style="font-size:28px;font-weight:900;color:#17345f">El problema no siempre es la falta de ejercicios.</div>
+      <div style="font-size:21px;margin-top:8px"><b>Muchas veces lo que falta es saber qué trabajar primero y cómo conectar trazos + sonidos + letras sin confundir ni aburrir al niño.</b></div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <h2>Imagina pasar de la duda a una rutina mucho más clara</h2>
+    <p class="lead">No se trata de llenar al niño de ejercicios. Se trata de tener una secuencia sencilla para acompañarlo sin sentir que cada día empiezas de cero.</p>
+
+    <div class="before-after">
+      <div class="ba-card ba-before">
+        <span class="ba-label">ANTES</span>
+        <h3>Improvisas y dudas</h3>
+        <div class="ba-list">
+          <div class="ba-item">😕 No sabes si empezar por trazos, letras, sonidos o sílabas.</div>
+          <div class="ba-item">📄 Guardas actividades sueltas sin una secuencia clara.</div>
+          <div class="ba-item">⏰ Pierdes tiempo buscando qué hacer ese día.</div>
+          <div class="ba-item">😣 Te preocupa que el niño se frustre o se aburra.</div>
+        </div>
+      </div>
+
+      <div class="ba-card ba-after">
+        <span class="ba-label">CON TRAZOS Y SONIDOS</span>
+        <h3>Tienes una ruta sencilla</h3>
+        <div class="ba-list">
+          <div class="ba-item">✅ Sabes qué habilidad practicar primero.</div>
+          <div class="ba-item">✅ Sigues actividades visuales y progresivas.</div>
+          <div class="ba-item">✅ Eliges una página y comienzan a practicar.</div>
+          <div class="ba-item">✅ Acompañas el proceso con más calma y confianza.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="transform-box">
+      <h3>Abres el material, eliges una actividad y sabes qué trabajar.</h3>
+      <p style="font-size:19px;margin:0">Sin preparar una clase completa y sin preguntarte todos los días “¿qué le enseño hoy?”.</p>
+    </div>
+
+    <div class="cta-center">
+      <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">QUIERO DEJAR DE IMPROVISAR</a>
+      <div class="cta-note">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="container">
+    <h2>La solución: una secuencia sencilla para avanzar paso a paso</h2>
+    <p class="lead">El método organiza las actividades para conectar movimiento, escucha, reconocimiento visual y lenguaje.</p>
+    <div class="steps">
+      <div class="step"><b>1. OBSERVA</b>Mira la letra, la imagen o el trazo.</div>
+      <div class="step"><b>2. TRAZA</b>Practica movimientos, formas y letras.</div>
+      <div class="step"><b>3. ESCUCHA</b>Presta atención al sonido.</div>
+      <div class="step"><b>4. IDENTIFICA</b>Encuentra palabras o imágenes que comienzan igual.</div>
+      <div class="step"><b>5. RELACIONA</b>Une letra + sonido + imagen.</div>
+      <div class="step"><b>6. PRACTICA</b>Refuerza con actividades sencillas y visuales.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>¿Qué podrá practicar tu niño?</h2>
+    <div class="checks">
+      <div class="check">✅ Control del lápiz y coordinación motora fina</div>
+      <div class="check">✅ Líneas, curvas, ondas y espirales</div>
+      <div class="check">✅ Escucha y comparación de sonidos</div>
+      <div class="check">✅ Separación y unión de sílabas</div>
+      <div class="check">✅ Reconocimiento del sonido inicial</div>
+      <div class="check">✅ Asociación entre sonido, letra e imagen</div>
+      <div class="check">✅ Formación de palabras sencillas</div>
+      <div class="check">✅ Primeras actividades de lectura y comprensión</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f7fbff">
+  <div class="container">
+    <h2>Mira algunas páginas reales del eBook</h2>
+    <p class="lead">Mostramos páginas diferentes para que veas la variedad del contenido y no las mismas imágenes repetidas.</p>
+    <div class="samples">
+      
+      <div class="sample">
+        <img src="assets/img-02-673ddf7df7.png" alt="Grafismo y coordinación motora fina">
+        <div class="sample-cap">Grafismo y coordinación motora fina</div>
+      </div>
+    
+      <div class="sample">
+        <img src="assets/img-03-51155ad149.png" alt="Descubriendo sonidos y letras">
+        <div class="sample-cap">Descubriendo sonidos y letras</div>
+      </div>
+    
+      <div class="sample">
+        <img src="assets/img-04-e787976b4d.png" alt="Sílabas y sonidos">
+        <div class="sample-cap">Sílabas y sonidos</div>
+      </div>
+    
+      <div class="sample">
+        <img src="assets/img-05-ae005332f4.png" alt="Formación de palabras">
+        <div class="sample-cap">Formación de palabras</div>
+      </div>
+    
+      <div class="sample">
+        <img src="assets/img-06-a55fc201a9.png" alt="Lectura y comprensión">
+        <div class="sample-cap">Lectura y comprensión</div>
+      </div>
+    
+      <div class="sample">
+        <img src="assets/img-07-f1b1175840.png" alt="Relaciona frase e imagen">
+        <div class="sample-cap">Relaciona frase e imagen</div>
+      </div>
+    
+    </div>
+    <div class="cta-center">
+      <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">QUIERO VER TODO EL MATERIAL</a>
+      <div class="cta-note">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+    </div>
+  </div>
+</section>
+
+<section class="bonus-wrap">
+  <div class="container">
+    <h2>Además recibes 6 bonos especiales</h2>
+    <p class="lead">Material complementario para reforzar el aprendizaje de una forma más visual y lúdica.</p>
+    <div class="bonus-grid">
+      <div class="bonus"><div class="num">1</div><div><h3>Alfabeto con Imágenes</h3><p>Relaciona cada letra con imágenes fáciles de reconocer.</p><div class="bonus-value"><del>Valor: 9 €</del> GRATIS</div></div></div>
+      <div class="bonus"><div class="num">2</div><div><h3>Rompecabezas del Alfabeto</h3><p>Recorta, arma y relaciona letras con imágenes.</p><div class="bonus-value"><del>Valor: 7 €</del> GRATIS</div></div></div>
+      <div class="bonus"><div class="num">3</div><div><h3>Formando Palabras</h3><p>Actividades para comenzar a construir palabras familiares.</p><div class="bonus-value"><del>Valor: 9 €</del> GRATIS</div></div></div>
+      <div class="bonus"><div class="num">4</div><div><h3>Alfabeto con Reloj</h3><p>Repasa letras de forma visual y divertida con un formato tipo reloj.</p><div class="bonus-value"><del>Valor: 7 €</del> GRATIS</div></div></div>
+      <div class="bonus"><div class="num">5</div><div><h3>Alfabeto Trazado</h3><p>Letras grandes para repasar, trazar y practicar.</p><div class="bonus-value"><del>Valor: 9 €</del> GRATIS</div></div></div>
+      <div class="bonus"><div class="num">6</div><div><h3>Alfabeto con Caritas</h3><p>Letras con personajes y expresiones divertidas.</p><div class="bonus-value"><del>Valor: 7 €</del> GRATIS</div></div></div>
+    </div>
+    <div class="bonus-total"><del>Valor total de los 6 bonos: 48 €</del><br>Hoy: incluidos GRATIS con Trazos y Sonidos</div>
+    <div class="cta-center">
+      <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">QUIERO EL EBOOK + LOS 6 BONOS</a>
+      <div class="cta-note">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="container">
+    <h2>Lo que otras familias valoran de este tipo de material</h2>
+    <p class="lead">Opiniones que refuerzan el valor de una guía clara, visual y fácil de aplicar para acompañar a los niños en sus primeros pasos.</p>
+    <div class="testimonials">
+      <div class="testimonial"><div class="name">André Azevedo</div><div class="stars">★★★★★</div><div class="quote">“Mis pequeños están logrando una evolución significativa gracias al Grafismo Fonético. Quien compre otro producto es porque no le gusta ahorrar dinero.”</div></div>
+      <div class="testimonial"><div class="name">Ana Oliveira</div><div class="stars">★★★★★</div><div class="quote">“Mi hija comenzó a formar palabras con apenas dos semanas usando el kit. ¡Es increíble cómo evolucionó en tan poco tiempo!”</div></div>
+      <div class="testimonial"><div class="name">Marisa Correia</div><div class="stars">★★★★★</div><div class="quote">“Créanme, esta es la mejor compra que van a hacer este año. ¡No pierdan la oportunidad!”</div></div>
+      <div class="testimonial"><div class="name">Camila Silva</div><div class="stars">★★★★★</div><div class="quote">“Es increíble cómo algo tan sencillo puede hacer tanta diferencia. Estoy muy satisfecha con mi compra.”</div></div>
+    </div>
+</div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>“Pero yo no soy maestra…”</h2>
+    <p class="lead">No necesitas convertir tu casa en un salón de clases. La idea es acompañar al niño con una guía visual, clara y progresiva.</p>
+    <div class="objections">
+      <div class="card"><h3>“Mi niño todavía no sabe leer”</h3><p>Está bien. El material está pensado para nivel principiante y trabaja habilidades previas como trazos, sonidos, sílabas y asociación.</p></div>
+      <div class="card"><h3>“Se aburre muy rápido”</h3><p>No hace falta completar muchas páginas en una sola sesión. Puedes avanzar de forma gradual y alternar tipos de actividad.</p></div>
+      <div class="card"><h3>“No sé cómo explicarle”</h3><p>La secuencia Observa → Traza → Escucha → Identifica → Relaciona → Practica te da una ruta sencilla.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="offer-section">
+  <div class="container">
+    <h2>Deja de improvisar qué enseñar cada día y empieza con una ruta clara</h2>
+    <div class="value-reminder">Una sola guía para organizar trazos, sonidos, letras, sílabas y primeras palabras paso a paso.</div>
+    <div class="offer" id="COMPRAR">
+      <span class="eyebrow">PACK DIGITAL COMPLETO</span>
+      <div class="price">9 €</div>
+      <ul>
+        <li>eBook principal <b>Trazos y Sonidos — 52 páginas</b></li>
+        <li>6 bonos incluidos</li>
+        <li>Material listo para imprimir</li>
+        <li>Acceso digital inmediato</li>
+        <li>Ideal para casa o aula</li>
+        <li>Garantía de 15 días</li>
+      </ul><br>
+      <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">SÍ, QUIERO TRAZOS Y SONIDOS AHORA</a>
+      <div class="subnote">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container guarantee">
+    <div class="seal">GARANTÍA<br><span style="font-size:34px">15 DÍAS</span><br>SIN RIESGO</div>
+    <div>
+      <h2 style="text-align:left">Tu compra está protegida</h2>
+      <p style="font-size:18px">Tendrás 15 días de garantía desde tu compra. Si dentro de ese periodo decides que el producto no es para ti, podrás solicitar la devolución siguiendo las condiciones de la plataforma de pago.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f7fbff">
+  <div class="container">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+      <details><summary>¿Recibiré un producto físico?</summary><p>No. Trazos y Sonidos es un producto digital en PDF.</p></details>
+      <details><summary>¿Puedo imprimir las actividades?</summary><p>Sí. El material está preparado para que puedas imprimir las actividades y trabajar con ellas.</p></details>
+      <details><summary>¿Qué edad es la recomendada?</summary><p>Está pensado principalmente para niños aproximadamente de 4 a 6 años que están dando sus primeros pasos con grafismo, letras, sonidos y sílabas.</p></details>
+      <details><summary>¿Mi niño tiene que saber leer?</summary><p>No. El material está planteado para nivel principiante.</p></details>
+      <details><summary>¿Los 6 bonos están incluidos?</summary><p>Sí. Los seis bonos mostrados en esta página están incluidos con la compra.</p></details>
+      <details><summary>¿Necesito experiencia como docente?</summary><p>No. También está pensado para madres, padres y cuidadores.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>Hoy puedes dejar de preguntarte “¿qué practicamos?”</h2>
+    <p class="lead">Empieza con una guía clara, visual y progresiva para acompañar sus primeros pasos sin preparar actividades desde cero.</p>
+    <a class="cta" href="https://pay.hotmart.com/J107804380L?checkoutMode=10&bid=1790646720052">QUIERO TRAZOS Y SONIDOS + 6 BONOS</a>
+    <div class="subnote">🔒 Pago único de 9 € · Acceso inmediato · Garantía de 15 días</div>
+  </div>
+</section>
+
+</body>
+</html>
